@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion buildConfig.compileSdk
+
+    defaultConfig {
+        minSdkVersion buildConfig.minSdk
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    libraryVariants.all {
+        it.generateBuildConfigProvider.configure {
+            it.enabled = false
+        }
+    }
+}
+
+dependencies {
+    implementation deps.kotlinStdlib
+
+    implementation deps.androidx.appcompat
+    implementation deps.androidx.arch.runtime
+    implementation deps.androidx.arch.viewmodel
+    kapt deps.androidx.arch.compiler
+
+    api deps.rx.kotlin
+    api deps.rx.relay
+    implementation deps.rx.android
+
+    testImplementation deps.tests.junit
+    testImplementation deps.tests.mockito
+}

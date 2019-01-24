@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/components_lifecycle_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Components lifecycle" />
+
+        <Button
+            android:id="@+id/edit_text_widget_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit text widget" />
+
+        <Button
+            android:id="@+id/simple_recycler_view_widget_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simple recycler view widget" />
+
+        <Button
+            android:id="@+id/background_processing_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Background processing" />
+
+        <Button
+            android:id="@+id/runtime_permissions_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Runtime permissions" />
+
+    </LinearLayout>
+
+</FrameLayout>

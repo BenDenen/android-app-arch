@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/title_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="EditText widgets"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scroll_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_txt">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Simple text input" />
+
+            <EditText
+                android:id="@+id/simple_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Input" />
+
+            <TextView
+                android:id="@+id/simple_entered_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Text entered: input" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="42dp"
+                android:text="Filter all non-digits text input" />
+
+            <EditText
+                android:id="@+id/filtered_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Input" />
+
+            <TextView
+                android:id="@+id/filtered_entered_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Text entered: input" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout"
+                android:layout_width="match_parent"
+                android:layout_marginTop="42dp"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/error_edit_text"
+                    android:layout_width="match_parent"
+                    android:hint="Allow only emails material text input"
+                    android:layout_height="wrap_content"
+                    tools:text="Input" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

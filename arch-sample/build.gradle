@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion buildConfig.compileSdk
+
+    defaultConfig {
+        applicationId "com.kvazars.arch.sample"
+        minSdkVersion buildConfig.minSdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    android {
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+}
+
+androidExtensions {
+    experimental = true
+}
+
+dependencies {
+    api project(':arch-core')
+    api project(':arch-controls')
+
+    implementation deps.kotlinStdlib
+    implementation deps.koptional
+    implementation deps.androidx.appcompat
+    implementation deps.androidx.constraint
+    implementation deps.androidx.material
+
+    implementation deps.rx.binding.kotlin
+}
