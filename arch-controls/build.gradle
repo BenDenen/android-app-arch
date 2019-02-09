@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.github.dcendents.android-maven'
 
 android {
     compileSdkVersion buildConfig.compileSdk
@@ -32,15 +33,9 @@ dependencies {
 
     implementation deps.androidx.appcompat
     implementation deps.androidx.material
-    implementation deps.androidx.arch.runtime
-    implementation deps.androidx.arch.viewmodel
-    kapt deps.androidx.arch.compiler
 
     implementation deps.rx.kotlin
     implementation deps.rx.android
     implementation deps.rx.relay
     implementation deps.rx.binding.kotlin
-
-    testImplementation deps.tests.junit
-    testImplementation deps.tests.mockito
 }
