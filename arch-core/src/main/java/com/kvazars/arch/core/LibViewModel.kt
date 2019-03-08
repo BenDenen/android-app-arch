@@ -2,7 +2,6 @@
 
 package com.kvazars.arch.core
 
-import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.ViewModel
 import com.jakewharton.rxrelay2.BehaviorRelay
 import com.jakewharton.rxrelay2.PublishRelay
@@ -20,7 +19,7 @@ import io.reactivex.observables.ConnectableObservable
 import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.atomic.AtomicReference
 
-open class LibViewModel : ViewModel(), LifecycleObserver {
+open class LibViewModel : ViewModel() {
 
     enum class Lifecycle {
         CREATE, BIND, UNBIND, DESTROY
